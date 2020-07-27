@@ -7,4 +7,5 @@ autoload/plugged/*
 paths.vim
 session
 wiki/
+README.md
 
