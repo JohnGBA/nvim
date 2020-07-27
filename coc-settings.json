@@ -41,11 +41,15 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.formatting.provider": "black",
-  "python.formatting.blackPath": "~/.miniconda/envs/neovim/bin/black",
-  // "python.linting.pylintPath": "~/.miniconda/envs/neovim/bin/pylint",
-  "python.condaPath": "~/.miniconda/bin/conda",
-  "python.sortImports.path": "~/.miniconda/envs/neovim/bin/isort",
-  "python.jediPath": "~/.miniconda/envs/neovim/lib/python3.8/site-packages",
+  "python.formatting.blackPath": "~/anaconda3/envs/py37/bin/black",
+  // "python.formatting.blackPath": "~/.miniconda/envs/neovim/bin/black",
+
+  // python.linting.pylintPath": "~/.miniconda/envs/neovim/bin/pylint",
+  "python.linting.pylintPath": "~/anaconda3/envs/py37/bin/pylint",
+
+  "python.condaPath": "~/anaconda3/bin/conda",
+  "python.sortImports.path": "~/anaconda3/envs/py37/bin/isort",
+  "python.jediPath": "~/anaconda3/envs/py37/lib/python3.7/site-packages",
 
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],

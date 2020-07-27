@@ -32,9 +32,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   else
     " Text Navigation
-    Plug 'justinmk/vim-sneak'
-    Plug 'unblevable/quick-scope'
-    " Plug 'easymotion/vim-easymotion'
+    " Plug 'justinmk/vim-sneak'
+    " Plug 'unblevable/quick-scope'
+    Plug 'easymotion/vim-easymotion'
     " Add some color
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'junegunn/rainbow_parentheses.vim'
@@ -48,17 +48,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'alvan/vim-closetag'
     " Themes
     Plug 'christianchiarulli/onedark.vim'
-    " Plug 'kaicataldo/material.vim'
-    " Plug 'NLKNguyen/papercolor-theme'
-    " Plug 'tomasiser/vim-code-dark'
+    Plug 'lifepillar/vim-solarized8'
+    Plug 'morhetz/gruvbox'
+    Plug 'kaicataldo/material.vim'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'cocopon/iceberg.vim'
+    Plug 'Rigellute/rigel'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline-themes'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
+    Plug 'francoiscabrol/ranger.vim'
+    Plug 'rbgrouleff/bclose.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -78,7 +82,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
     " Zen mode
-    Plug 'junegunn/goyo.vim'
+    " Plug 'junegunn/goyo.vim'
     " Making stuff
     Plug 'neomake/neomake'
     " Snippets
@@ -92,6 +96,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/codi.vim'
     " Vim Wiki
     " Plug 'https://github.com/vimwiki/vimwiki.git'
+    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
   endif
 
 

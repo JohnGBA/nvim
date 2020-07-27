@@ -1,5 +1,6 @@
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set formatoptions-=cro                  " Stop newline continution of comments
+set noswapfile
 
 if !exists('g:vscode')
   syntax enable                           " Enables syntax highlighing
@@ -30,21 +31,28 @@ if !exists('g:vscode')
   set nobackup                            " This is recommended by coc
   set nowritebackup                       " This is recommended by coc
   set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
-  set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
+  set signcolumn=no                       " Always show the signcolumn, otherwise it would shift the text each time
   set updatetime=300                      " Faster completion
-  set timeoutlen=100                      " By default timeoutlen is 1000 ms
+  set timeoutlen=300                      " By default timeoutlen is 1000 ms
   set clipboard=unnamedplus               " Copy paste between vim and everything else
   set incsearch
-  set guifont=Hack\ Nerd\ Font
+  " set guifont=Hack\ Nerd\ Font
+  set guifont=Source\ Code\ Pro\ Regular
   " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   " set mmp=1300
-  " set autochdir                           " Your working directory will always be the same as your working directory
+  set autochdir                           " Your working directory will always be the same as your working directory
   " set foldcolumn=2                        " Folding abilities
 
   " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-
+  autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+  autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+  
+  set termguicolors
+  " colorscheme solarized8
+  " colorscheme onedark
+  " colorscheme material
+  colorscheme iceberg
   " You can't stop me
   cmap w!! w !sudo tee %
 endif

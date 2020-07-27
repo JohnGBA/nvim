@@ -4,7 +4,7 @@ imap <C-j> <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
 " g Leader key
-let mapleader=" "
+let mapleader=","
 " let localleader=" "
 nnoremap <Space> <Nop>
 
@@ -75,4 +75,16 @@ else
   nnoremap <silent> <M-h>    :vertical resize -2<CR>
   nnoremap <silent> <M-l>    :vertical resize +2<CR>
 endif
+
+let t:is_transparent = 0                                                                        
+function! Toggle_transparent_background()                                                       
+  if t:is_transparent == 0                                                                      
+    hi Normal guibg=#111111 ctermbg=black                                                       
+    let t:is_transparent = 1                                                                    
+  else                                                                                          
+    hi Normal guibg=NONE ctermbg=NONE                                                           
+    let t:is_transparent = 0                                                                    
+  endif                                                                                         
+endfunction                                                                                     
+nnoremap <C-x><C-t> :call Toggle_transparent_background()<CR>  
 
